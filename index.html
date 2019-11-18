@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript">
+    function submitForm(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const image = document.getElementById('image');
+      image.style.display='initial';
+      return false;
+    }
+    function hideImage() {
+       const image = document.getElementById('image');
+      image.style.display='none';
+      return false;
+    }
+  </script>
+  <title>
+    мемасики
+  </title>
+</head>
+<body>
+<h1>
+  введите ваше имя
+</h1>
+<form onsubmit="submitForm(event)">
+  <input name="name" placeholder="введите ваше имя" />
+</form>
+
+<div id="image" style="display: none">
+<img src="images/00s.jpg" >
+</div>
+<p onclick="hideImage()">
+  скрыть
+</p>
+
+</body>
+</html>
